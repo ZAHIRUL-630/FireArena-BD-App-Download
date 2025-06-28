@@ -1,88 +1,86 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
+:root {
+  --bg: #111;
+  --text: #fff;
+  --accent: #00b894;
+  --drop: #1f1f1f;
 }
 
-html, body {
-  overflow-x: hidden;
-  background: linear-gradient(to bottom right, #f0f8ff, #e0ecff);
-  color: #1f2937;
+.light {
+  --bg: #f4f4f4;
+  --text: #111;
+  --accent: #0984e3;
+  --drop: #ddd;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Segoe UI', sans-serif;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 20px;
+  height: 100vh;
 }
 
 .container {
-  max-width: 420px;
-  width: 100%;
-  background: white;
-  border-radius: 20px;
+  background: var(--drop);
   padding: 30px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.logo {
-  font-size: 18px;
-  font-weight: bold;
-  color: #10b981;
-  margin-bottom: 10px;
-}
-
-.headline {
-  font-size: 20px;
-  font-weight: 700;
-  margin-bottom: 15px;
-}
-
-.subtext {
-  font-size: 14px;
-  color: #4b5563;
-  margin-bottom: 25px;
-}
-
-.download-btn {
-  display: inline-block;
-  background-color: #6366f1;
-  color: white;
-  padding: 12px 24px;
-  font-size: 16px;
-  font-weight: 600;
   border-radius: 12px;
-  text-decoration: none;
-  transition: background 0.3s ease;
-}
-
-.download-btn:hover {
-  background-color: #4f46e5;
-}
-
-.illustration {
-  margin-top: 25px;
-}
-
-.illustration img {
-  width: 100%;
-  max-width: 300px;
-}
-
-.top-banner {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 20px;
   text-align: center;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
 }
 
-footer {
-  margin-top: 40px;
-  padding: 20px;
-  text-align: center;
-  font-size: 14px;
-  background-color: #f3f4f6;
-  width: 100%;
-  color: #374151;
+.dropzone {
+  border: 2px dashed var(--accent);
+  padding: 30px;
+  margin-bottom: 15px;
+  cursor: pointer;
   border-radius: 10px;
+  transition: background 0.3s;
+}
+
+.dropzone:hover {
+  background-color: rgba(0,0,0,0.1);
+}
+
+button {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px 5px 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: none;
+}
+
+.progress-container {
+  height: 10px;
+  background: #444;
+  margin-top: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  display: none;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: var(--accent);
+  transition: width 0.3s;
 }

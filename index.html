@@ -1,35 +1,35 @@
 <!DOCTYPE html>
-<html lang="bn">
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Codemon Softnic LTD</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Catbox Style Image Uploader</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <div class="top-banner">NEW HIGH QUALITY DOWNLOAD LINK AVAILABLE</div>
   <div class="container">
-    <div class="logo">CODEMON SOFTNIC LTD</div>
-    <div class="headline">    </div>
-    <div class="subtext">
-                  CODEMON SOFTNIC LTD   -
-    </div>
-    <a href="#" class="download-btn" onclick="handleDownload()">Download App</a>
-    <div class="illustration">
-      <img src="https://i.imgur.com/4QfKuz1.png" alt="Ludo Illustration">
-    </div>
-  </div>
+    <h1>📤 Upload Your Image</h1>
 
-  <footer>
-    <h3> </h3>
-    <p> 01856591506</p>
-    <p> jibonsarker228@gmail.com</p>
-  </footer>
+    <label class="dropzone" id="dropzone">
+      <input type="file" id="imageInput" accept="image/*" hidden />
+      <p>📂 Drag & Drop or Click to Select Image</p>
+    </label>
+
+    <button id="uploadBtn">⬆️ Upload</button>
+
+    <div class="progress-container" id="progressContainer">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <div class="result" id="result">
+      <p>✅ Uploaded Link:</p>
+      <input type="text" id="imageLink" readonly />
+      <button onclick="copyLink()">📋 Copy Link</button>
+    </div>
+
+    <button id="themeToggle">🌗 Toggle Theme</button>
+  </div>
 
   <script src="script.js"></script>
 </body>
-
 </html>
