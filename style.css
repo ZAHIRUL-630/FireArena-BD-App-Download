@@ -6,6 +6,10 @@ css
   font-family: 'Inter', sans-serif;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 body {
   background: linear-gradient(to bottom right, #f0f8ff, #e0ecff);
   color: #1f2937;
