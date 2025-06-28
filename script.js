@@ -1,17 +1,5 @@
-document.getElementById('downloadBtn').addEventListener('click', function() {
-
-    const appUrl = 'https://pay.netpaybd.com/NetPayBD.apk';
-    
-   
-    const link = document.createElement('a');
-    link.href = appUrl;
-    link.download = 'FreeFireTournament.apk';
-    
-
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    
-
-    alert('ডাউনলোড শুরু হচ্ছে...');
-});
+javascript
+function handleDownload() {
+  alert("অ্যাপ ডাউনলোড লিংক খুব শীঘ্রই যুক্ত হবে। আপাতত ধন্যবাদ!");
+  // window.location.href = "https://yourdownloadlink.com"; // Uncomment this line when you have the real link
+}
